@@ -1,0 +1,13 @@
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.exe
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.deps.json
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.runtimeconfig.json
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.runtimeconfig.dev.json
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.dll
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\bin\Debug\netcoreapp3.1\bingo.pdb
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.csprojAssemblyReference.cache
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.AssemblyInfoInputs.cache
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.AssemblyInfo.cs
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.csproj.CoreCompileInputs.cache
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.dll
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.pdb
+C:\Users\simon.tonnes\source\repos\CODE_IS_KING\Uppgift10\src\bingo\obj\Debug\netcoreapp3.1\bingo.genruntimeconfig.cache
