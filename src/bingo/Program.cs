@@ -6,7 +6,8 @@ namespace bingo
     {
         static void Main(string[] args)
         {
-            var game = new GameOfBingo(15);
+            int numOfRows = 15;
+            var game = new GameOfBingo(numOfRows);
             game.ConsolePrintBingoBoard();
             while (true)
             {
