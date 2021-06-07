@@ -8,20 +8,7 @@ namespace bingo
         {
             int numOfRows = 15;
             var game = new GameOfBingo(numOfRows);
-            game.ConsolePrintBingoBoard();
-            while (true)
-            {
-                Console.ReadKey();
-                var numberDrawn = game.DrawNumber();
-                Console.WriteLine($"Number drawn: {numberDrawn}");
-                Console.ReadKey();
-
-                game.MarkNumberIfDrawn(numberDrawn);
-                Console.Clear();
-                game.ConsolePrintBingoBoard();
-            }
-            
-
+            game.Start();
         }
     }
 }

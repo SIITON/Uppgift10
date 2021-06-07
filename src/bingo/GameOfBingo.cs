@@ -40,6 +40,35 @@ namespace bingo
             _drawnNumbers = new List<int>();
             _turn = 0;
         }
+
+        public void Start()
+        {
+            ConsolePrintBingoBoard();
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
+            do
+            {
+                var numberDrawn = DrawNumber();
+                Console.WriteLine($"Number drawn: {numberDrawn}");
+                if (_numbersGenerated.Contains(numberDrawn))
+                {
+                    Console.WriteLine("Nice, let's mark it!");
+                }
+                else
+                {
+                    Console.WriteLine("Damn, let's hope for the next one.");
+                }
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+                MarkNumberIfDrawn(numberDrawn);
+                Console.Clear();
+                ConsolePrintBingoBoard();
+                Console.WriteLine($"Horizontal bingo: {IsBingoHorizontally()}");
+            } while (!IsBingoHorizontally());
+
+            Console.WriteLine("BINGO!");
+            
+        }
         private List<int> GenerateUniqueRandomOrderedNumbers(int maxCount, int maxValue)
         {
             maxValue = (maxCount > maxValue) ? maxCount : maxValue;
@@ -110,6 +139,22 @@ namespace bingo
                     }
                 }
             }
+        }
+
+        public bool IsBingoHorizontally()
+        {
+            var isBingo = false;
+            foreach (var bingoRow in Rows)
+            {
+                isBingo = bingoRow.IsMarked.Where(b => b == true)
+                                           .Select(b => b)
+                                           .Count() == 5;
+                if (isBingo)
+                {
+                    return true;
+                }
+            }
+            return isBingo;
         }
     }
 }
