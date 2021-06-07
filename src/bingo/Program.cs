@@ -13,10 +13,12 @@ namespace bingo
             {
                 Console.ReadKey();
                 var numberDrawn = game.DrawNumber();
+                Console.WriteLine($"Number drawn: {numberDrawn}");
+                Console.ReadKey();
+
                 game.MarkNumberIfDrawn(numberDrawn);
                 Console.Clear();
                 game.ConsolePrintBingoBoard();
-                Console.WriteLine($"Number drawn: {numberDrawn}");
             }
             
 

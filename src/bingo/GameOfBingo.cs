@@ -22,15 +22,10 @@ namespace bingo
 
         private void InitNewBingoBoard(int numOfRows)
         {
-            _numbersGenerated = new List<int>();
-            while (_numbersGenerated.Count < _numPerRow * numOfRows)
-            {
-                var randNum = r.Next(1, 100);
-                if (!_numbersGenerated.Contains(randNum))
-                {
-                    _numbersGenerated.Add(randNum);
-                }
-            }
+            var countOfNumbersToGenerate = _numPerRow * numOfRows;
+            //_numbersGenerated = new List<int>();
+            _numbersGenerated = GenerateUniqueRandomOrderedNumbers(countOfNumbersToGenerate, 100);
+
             Rows = new List<BingoRow>();
             for (int i = 0; i < numOfRows; i++)
             {
@@ -44,6 +39,20 @@ namespace bingo
 
             _drawnNumbers = new List<int>();
             _turn = 0;
+        }
+        private List<int> GenerateUniqueRandomOrderedNumbers(int maxCount, int maxValue)
+        {
+            maxValue = (maxCount > maxValue) ? maxCount : maxValue;
+            var numbersGenerated = new List<int>();
+            while (numbersGenerated.Count < maxCount)
+            {
+                var randNum = r.Next(1, maxValue);
+                if (!numbersGenerated.Contains(randNum))
+                {
+                    numbersGenerated.Add(randNum);
+                }
+            }
+            return numbersGenerated;
         }
 
         public void ConsolePrintBingoBoard()
