@@ -12,7 +12,7 @@ namespace bingo
         private readonly Random r = new Random();
         private int _numPerRow = 5;
         private List<int> _drawnNumbers;
-        private int _turn;
+        public int Turn;
 
         public GameOfBingo(int numOfRows)
         {
@@ -20,10 +20,9 @@ namespace bingo
             
         }
 
-        private void InitNewBingoBoard(int numOfRows)
+        public void InitNewBingoBoard(int numOfRows)
         {
             var countOfNumbersToGenerate = _numPerRow * numOfRows;
-            //_numbersGenerated = new List<int>();
             _numbersGenerated = GenerateUniqueRandomOrderedNumbers(countOfNumbersToGenerate, 100);
 
             Rows = new List<BingoRow>();
@@ -38,10 +37,10 @@ namespace bingo
             }
 
             _drawnNumbers = new List<int>();
-            _turn = 0;
+            Turn = 0;
         }
 
-        public void Start()
+        public void StartInConsole()
         {
             ConsolePrintBingoBoard();
             Console.WriteLine("Press any key to continue.");
@@ -67,8 +66,8 @@ namespace bingo
             } while (!IsBingoHorizontally());
 
             Console.WriteLine("BINGO!");
-            
         }
+
         private List<int> GenerateUniqueRandomOrderedNumbers(int maxCount, int maxValue)
         {
             maxValue = (maxCount > maxValue) ? maxCount : maxValue;
@@ -86,7 +85,7 @@ namespace bingo
 
         public void ConsolePrintBingoBoard()
         {
-            int i = 0;
+            //int i = 0;
             foreach (var row in Rows)
             {
                 for (int j = 0; j < _numPerRow; j++)
@@ -125,7 +124,7 @@ namespace bingo
 
         public void MarkNumberIfDrawn(int number)
         {
-            _turn++;
+            Turn++;
             if (_numbersGenerated.Contains(number))
             {
                 foreach (var row in Rows)
